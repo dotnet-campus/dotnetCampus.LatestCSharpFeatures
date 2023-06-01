@@ -22,4 +22,8 @@
     </ItemGroup>
   </Target>
 
+  <ItemGroup Condition="'$(TargetFramework)'!='net7.0'">
+    <ProjectReference Include="..\dotnetCampus.IsExternalInit\dotnetCampus.IsExternalInit.csproj" />
+  </ItemGroup>
+
 </Project>
