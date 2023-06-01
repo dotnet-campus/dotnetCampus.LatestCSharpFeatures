@@ -1,11 +1,15 @@
-﻿namespace System.Runtime.CompilerServices
+﻿#if NET7_0_OR_GREATER
+// .NET 7.0 开始已包含 required。
+#else
+// 旧框架需要包含 required。
+namespace System.Runtime.CompilerServices
 {
     /// <summary>
     /// Specifies that a type has required members or that a member is required.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
 
-    public sealed class RequiredMemberAttribute : Attribute
+    internal sealed class RequiredMemberAttribute : Attribute
     {
     }
 
@@ -13,7 +17,7 @@
     /// Indicates that compiler support for a particular feature is required for the location where this attribute is applied.
     /// </summary>
     [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = false)]
-    public sealed class CompilerFeatureRequiredAttribute : Attribute
+    internal sealed class CompilerFeatureRequiredAttribute : Attribute
     {
         public CompilerFeatureRequiredAttribute(string featureName)
         {
@@ -41,3 +45,4 @@
         public const string RequiredMembers = nameof(RequiredMembers);
     }
 }
+#endif
