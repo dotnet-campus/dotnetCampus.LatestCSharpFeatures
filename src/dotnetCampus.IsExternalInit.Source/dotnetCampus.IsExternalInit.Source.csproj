@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net5.0;netcoreapp3.0;netstandard1.0;net40</TargetFrameworks>
@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="dotnetCampus.SourceYard" Version="1.0.0-alpha01" PrivateAssets="all" />
+    <PackageReference Include="dotnetCampus.SourceYard" Version="1.0.0-alpha03" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>

@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="dotnetCampus.SourceYard" Version="1.0.0-alpha01" PrivateAssets="all" />
+    <PackageReference Include="dotnetCampus.SourceYard" Version="1.0.0-alpha03" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>

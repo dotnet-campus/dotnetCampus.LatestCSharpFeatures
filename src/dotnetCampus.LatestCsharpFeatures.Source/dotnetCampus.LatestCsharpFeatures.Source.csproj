@@ -9,7 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="dotnetCampus.SourceYard" Version="1.0.0-alpha01" PrivateAssets="all" />
+    <PackageReference Include="dotnetCampus.SourceYard" Version="1.0.0-alpha03" PrivateAssets="all" />
   </ItemGroup>
+
+  <!-- 源代码包暂时不支持 Link 过来的文件，所以这里先不用 Link -->
+  <!--<ItemGroup>
+    <Compile Include="..\dotnetCampus.Nullable\**\*.cs" Exclude="..\dotnetCampus.Nullable\**\obj\**\*.cs;..\dotnetCampus.Nullable\**\bin\**\*.cs" />
+    <Compile Include="..\dotnetCampus.IsExternalInit\**\*.cs" Exclude="..\dotnetCampus.IsExternalInit\**\obj\**\*.cs;..\dotnetCampus.IsExternalInit\**\bin\**\*.cs" />
+    <Compile Include="..\dotnetCampus.Required\**\*.cs" Exclude="..\dotnetCampus.Required\**\obj\**\*.cs;..\dotnetCampus.Required\**\bin\**\*.cs" />
+  </ItemGroup>-->
 
 </Project>
