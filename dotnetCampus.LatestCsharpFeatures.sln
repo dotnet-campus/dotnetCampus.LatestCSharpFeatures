@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决�
 		build\Version.props = build\Version.props
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.IsExternalInit", "src\dotnetCampus.IsExternalInit\dotnetCampus.IsExternalInit.csproj", "{0DDC38EF-851E-49E7-B72A-DF46E44E3586}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetCampus.IsExternalInit.Source", "src\dotnetCampus.IsExternalInit.Source\dotnetCampus.IsExternalInit.Source.csproj", "{94E8B753-81BF-44DC-A8D6-AC1D1FE54244}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{9A7C6595-ED09-42E6-B05F-3F8EEC29BCD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A7C6595-ED09-42E6-B05F-3F8EEC29BCD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A7C6595-ED09-42E6-B05F-3F8EEC29BCD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DDC38EF-851E-49E7-B72A-DF46E44E3586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DDC38EF-851E-49E7-B72A-DF46E44E3586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DDC38EF-851E-49E7-B72A-DF46E44E3586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DDC38EF-851E-49E7-B72A-DF46E44E3586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94E8B753-81BF-44DC-A8D6-AC1D1FE54244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E8B753-81BF-44DC-A8D6-AC1D1FE54244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E8B753-81BF-44DC-A8D6-AC1D1FE54244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E8B753-81BF-44DC-A8D6-AC1D1FE54244}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
