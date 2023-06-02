@@ -23,11 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.Required", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.Required.Source", "src\dotnetCampus.Required.Source\dotnetCampus.Required.Source.csproj", "{4EBF62CB-613E-4496-B890-B1F433ED7581}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.LatestCsharpFeatures1", "src\dotnetCampus.LatestCsharpFeatures\dotnetCampus.LatestCsharpFeatures1.csproj", "{D0B0F7EB-3C81-45C4-BB47-5DCB16F2EA55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.LatestCSharpFeatures", "src\dotnetCampus.LatestCSharpFeatures\dotnetCampus.LatestCSharpFeatures.csproj", "{D0B0F7EB-3C81-45C4-BB47-5DCB16F2EA55}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.Nullable.Source", "src\dotnetCampus.Nullable.Source\dotnetCampus.Nullable.Source.csproj", "{72163C73-CBC5-4CB5-BDDF-769B7AFD6FAB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.LatestCsharpFeatures.Source1", "src\dotnetCampus.LatestCsharpFeatures.Source\dotnetCampus.LatestCsharpFeatures.Source1.csproj", "{C907433B-19CB-4216-9002-C3C9AC2A8633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.LatestCSharpFeatures.Source1", "src\dotnetCampus.LatestCSharpFeatures.Source\dotnetCampus.LatestCSharpFeatures.Source1.csproj", "{C907433B-19CB-4216-9002-C3C9AC2A8633}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{19AD69CA-F593-4789-A51F-9E547033147D}"
 EndProject

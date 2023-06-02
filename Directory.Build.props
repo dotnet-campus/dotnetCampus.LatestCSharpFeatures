@@ -11,8 +11,8 @@
     <PackageOutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)</PackageOutputPath>
     <Company>dotnet campus（.NET 职业技术学院）</Company>
     <Authors>dotnet-campus</Authors>
-    <RepositoryUrl>https://github.com/dotnet-campus/dotnetCampus.LatestCsharpFeatures</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/dotnet-campus/dotnetCampus.LatestCsharpFeatures</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <Copyright>Copyright © 2023 dotnet campus, All Rights Reserved.</Copyright>
 
