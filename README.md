@@ -2,10 +2,10 @@
 
 | Language |
 | --- |
-| [简体中文](/docs/README.zh-CHS.txt) |
-| [繁體中文](/docs/README.zh-CHT.txt) |
+| [简体中文](/docs/README.zh-CHS.md) |
+| [繁體中文](/docs/README.zh-CHT.md) |
 | [English](/README.md) |
-| [日本語](/docs/README.jp.txt) |
+| [日本語](/docs/README.jp.md) |
 
 This open-source project provides a series of NuGet packages that allow you to use the latest C# language features in older versions of .NET (including older .NET Framework, .NET Standard, as well as older .NET Core App, .NET).
 

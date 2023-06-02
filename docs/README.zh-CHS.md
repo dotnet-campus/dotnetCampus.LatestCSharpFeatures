@@ -2,10 +2,10 @@
 
 | Language |
 | --- |
-| [简体中文](/docs/README.zh-CHS.txt) |
-| [繁體中文](/docs/README.zh-CHT.txt) |
+| [简体中文](/docs/README.zh-CHS.md) |
+| [繁體中文](/docs/README.zh-CHT.md) |
 | [English](/README.md) |
-| [日本語](/docs/README.jp.txt) |
+| [日本語](/docs/README.jp.md) |
 
 此开源项目提供一系列 NuGet 包，让您可以在旧版本的 .NET（包括旧的 .NET Framework、.NET Standard，以及旧的 .NET Core App、.NET）中，使用最新的 C# 语言特性。
 

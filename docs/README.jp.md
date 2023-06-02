@@ -2,10 +2,10 @@
 
 | Language |
 | --- |
-| [简体中文](/docs/README.zh-CHS.txt) |
-| [繁體中文](/docs/README.zh-CHT.txt) |
+| [简体中文](/docs/README.zh-CHS.md) |
+| [繁體中文](/docs/README.zh-CHT.md) |
 | [English](/README.md) |
-| [日本語](/docs/README.jp.txt) |
+| [日本語](/docs/README.jp.md) |
 
 このオープンソースプロジェクトは一連のNuGetパッケージを提供し、古いバージョンの.NET（古い.NET Framework、.NET Standard、古い.NET Core App、.NETを含む）で最新のC#言語の特徴を使用できます。
 
