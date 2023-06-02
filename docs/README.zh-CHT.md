@@ -34,6 +34,8 @@ Campus.Required)|
 如果您希望 .Source 包對其他引用了此項目的項目也生效，可以在 csproj 文件中增加一個條件編譯符：
 
 ```xml
+<!-- 預設情況下，安裝 .Source 後綴的包會將 C# 新特性以 internal 修飾符引入當前項目。
+     使用此條件編譯符，可以將這些類型設為 public，使得引用此項目的其他項目也能使用這些新特性。 -->
 <DefineConstants>$(DefineConstants);USE_PUBLIC_LATEST_CSHARP_FEATURES</DefineConstants>
 ```
 

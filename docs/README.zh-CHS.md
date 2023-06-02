@@ -33,6 +33,8 @@
 如果您希望 .Source 包对其他引用了此项目的项目也生效，可以在 csproj 文件中增加一个条件编译符：
 
 ```xml
+<!-- 默认情况下，安装 .Source 后缀的包会将 C# 新特性以 internal 修饰符引入当前项目。
+     使用此条件编译符，可以将这些类型设为 public，使得引用此项目的其他项目也能使用这些新特性。 -->
 <DefineConstants>$(DefineConstants);USE_PUBLIC_LATEST_CSHARP_FEATURES</DefineConstants>
 ```
 

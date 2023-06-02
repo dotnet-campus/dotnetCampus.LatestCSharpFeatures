@@ -33,6 +33,8 @@ For both the all-in-one package and the single-feature packages, we provide two 
 If you want the .Source package to be effective for other projects that reference this project, you can add a conditional compilation symbol in the csproj file:
 
 ```xml
+<!-- By default, installing packages with a .Source suffix imports the new C# features into the current project as internal.
+     By using this conditional compilation symbol, these types can be set as public, allowing other projects referencing this project to also use these new features. -->
 <DefineConstants>$(DefineConstants);USE_PUBLIC_LATEST_CSHARP_FEATURES</DefineConstants>
 ```
 

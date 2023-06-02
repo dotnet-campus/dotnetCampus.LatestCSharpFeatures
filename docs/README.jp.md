@@ -34,6 +34,8 @@ us.Nullable.Source.svg)](https://www.nuget.org/packages/dotnetCampus.Nullable.So
 .Sourceパッケージをこのプロジェクトを参照した他のプロジェクトにも有効にしたい場合は、csprojファイルに条件付きコンパイルシンボルを追加できます：
 
 ```xml
+<!-- デフォルトでは、.Sourceの接尾辞が付いたパッケージをインストールすると、新しいC#の機能がinternalとして現在のプロジェクトにインポートされます。
+     この条件コンパイル記号を使用すると、これらのタイプをpublicとして設定でき、このプロジェクトを参照している他のプロジェクトもこれらの新機能を使用できます。 -->
 <DefineConstants>$(DefineConstants);USE_PUBLIC_LATEST_CSHARP_FEATURES</DefineConstants>
 ```
 
