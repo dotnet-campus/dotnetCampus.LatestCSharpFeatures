@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.Nullable", "src\dotnetCampus.Nullable\dotnetCampus.Nullable.csproj", "{2ECF1CEB-070E-4933-93C4-F7FD42D8693C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{8A6F61D3-076F-4B75-80A1-FF377AC69D73}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{8A6F61D3-076F-4B75-80A1-FF377AC69D73}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
@@ -17,17 +17,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.IsExternalInit", "src\dotnetCampus.IsExternalInit\dotnetCampus.IsExternalInit.csproj", "{0DDC38EF-851E-49E7-B72A-DF46E44E3586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetCampus.IsExternalInit.Source", "src\dotnetCampus.IsExternalInit.Source\dotnetCampus.IsExternalInit.Source.csproj", "{94E8B753-81BF-44DC-A8D6-AC1D1FE54244}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.IsExternalInit.Source", "src\dotnetCampus.IsExternalInit.Source\dotnetCampus.IsExternalInit.Source.csproj", "{94E8B753-81BF-44DC-A8D6-AC1D1FE54244}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetCampus.Required", "src\dotnetCampus.Required\dotnetCampus.Required.csproj", "{6ED76C7A-A16A-45A5-BC1F-91A880839C31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.Required", "src\dotnetCampus.Required\dotnetCampus.Required.csproj", "{6ED76C7A-A16A-45A5-BC1F-91A880839C31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetCampus.Required.Source", "src\dotnetCampus.Required.Source\dotnetCampus.Required.Source.csproj", "{4EBF62CB-613E-4496-B890-B1F433ED7581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.Required.Source", "src\dotnetCampus.Required.Source\dotnetCampus.Required.Source.csproj", "{4EBF62CB-613E-4496-B890-B1F433ED7581}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetCampus.LatestCsharpFeatures", "src\dotnetCampus.LatestCsharpFeatures\dotnetCampus.LatestCsharpFeatures.csproj", "{D0B0F7EB-3C81-45C4-BB47-5DCB16F2EA55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.LatestCsharpFeatures", "src\dotnetCampus.LatestCsharpFeatures\dotnetCampus.LatestCsharpFeatures.csproj", "{D0B0F7EB-3C81-45C4-BB47-5DCB16F2EA55}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.Nullable.Source", "src\dotnetCampus.Nullable.Source\dotnetCampus.Nullable.Source.csproj", "{72163C73-CBC5-4CB5-BDDF-769B7AFD6FAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetCampus.LatestCsharpFeatures.Source", "src\dotnetCampus.LatestCsharpFeatures.Source\dotnetCampus.LatestCsharpFeatures.Source.csproj", "{C907433B-19CB-4216-9002-C3C9AC2A8633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.LatestCsharpFeatures.Source", "src\dotnetCampus.LatestCsharpFeatures.Source\dotnetCampus.LatestCsharpFeatures.Source.csproj", "{C907433B-19CB-4216-9002-C3C9AC2A8633}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{19AD69CA-F593-4789-A51F-9E547033147D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalUsageLibrary", "samples\InternalUsageLibrary\InternalUsageLibrary.csproj", "{DF937968-A710-4079-86D2-B2483FF3D81F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,9 +71,16 @@ Global
 		{C907433B-19CB-4216-9002-C3C9AC2A8633}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C907433B-19CB-4216-9002-C3C9AC2A8633}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C907433B-19CB-4216-9002-C3C9AC2A8633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF937968-A710-4079-86D2-B2483FF3D81F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF937968-A710-4079-86D2-B2483FF3D81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF937968-A710-4079-86D2-B2483FF3D81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF937968-A710-4079-86D2-B2483FF3D81F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF937968-A710-4079-86D2-B2483FF3D81F} = {19AD69CA-F593-4789-A51F-9E547033147D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C90536BB-EF2C-4F5A-ABA9-27A8F412D3C3}
