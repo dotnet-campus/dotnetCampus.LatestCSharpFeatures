@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;netcoreapp3.0;netstandard1.0;net40</TargetFrameworks>
+    <RootNamespace>System.Diagnostics.CodeAnalysis</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>dotnetCampus.LatestCSharpFeatures</PackageId>
+    <Description>This comprehensive package provides support for the latest C# language features in your project, enabling older .NET projects to use newer C# language constructs. Currently includes support for 'nullable', 'init', and 'required' keywords. The types introduced are internal, confining these features to the project itself without affecting other projects that reference it. By installing this package, you get all the newest C# features in one place, eliminating the need to install separate packages for each feature. Future updates will include more new features as they are released.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dotnetCampus.SourceYard" Version="1.0.0-alpha03" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- 源代码包暂时不支持 Link 过来的文件，所以这里先不用 Link -->
+  <!--<ItemGroup>
+    <Compile Include="..\dotnetCampus.Nullable\**\*.cs" Exclude="..\dotnetCampus.Nullable\**\obj\**\*.cs;..\dotnetCampus.Nullable\**\bin\**\*.cs" />
+    <Compile Include="..\dotnetCampus.IsExternalInit\**\*.cs" Exclude="..\dotnetCampus.IsExternalInit\**\obj\**\*.cs;..\dotnetCampus.IsExternalInit\**\bin\**\*.cs" />
+    <Compile Include="..\dotnetCampus.Required\**\*.cs" Exclude="..\dotnetCampus.Required\**\obj\**\*.cs;..\dotnetCampus.Required\**\bin\**\*.cs" />
+  </ItemGroup>-->
+
+</Project>

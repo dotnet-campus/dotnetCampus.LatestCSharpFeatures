@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;net5.0;netcoreapp3.0;netstandard1.0;net40</TargetFrameworks>
+    <RootNamespace>System.Diagnostics.CodeAnalysis</RootNamespace>
+    <Description>This comprehensive package provides support for the latest C# language features in your project, enabling older .NET projects to use newer C# language constructs. Currently includes support for 'nullable', 'init', and 'required' keywords. The types introduced are public, allowing these features to propagate to other projects that reference this one. By installing this package, you get all the newest C# features in one place, eliminating the need to install separate packages for each feature. Future updates will include more new features as they are released.</Description>
+    <BuildOutputTargetFolder>Miscellaneous</BuildOutputTargetFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\dotnetCampus.Nullable\**\*.cs" Exclude="..\dotnetCampus.Nullable\**\obj\**\*.cs;..\dotnetCampus.Nullable\**\bin\**\*.cs" />
+    <Compile Include="..\dotnetCampus.IsExternalInit\**\*.cs" Exclude="..\dotnetCampus.IsExternalInit\**\obj\**\*.cs;..\dotnetCampus.IsExternalInit\**\bin\**\*.cs" />
+    <Compile Include="..\dotnetCampus.Required\**\*.cs" Exclude="..\dotnetCampus.Required\**\obj\**\*.cs;..\dotnetCampus.Required\**\bin\**\*.cs" />
+  </ItemGroup>
+
+  <Target Name="IncludeAllDependencies" BeforeTargets="_GetPackageFiles">
+    <ItemGroup>
+      <None Include="_._" Pack="True" PackagePath="lib\net7.0" />
+      <None Include="$(OutputPath)\net5.0\$(PackageId).dll" Pack="True" PackagePath="lib\net5.0" />
+      <None Include="$(OutputPath)\net5.0\$(PackageId).pdb" Pack="True" PackagePath="lib\net5.0" />
+      <None Include="$(OutputPath)\net5.0\$(PackageId).xml" Pack="True" PackagePath="lib\net5.0" />
+      <None Include="$(OutputPath)\netcoreapp3.0\$(PackageId).dll" Pack="True" PackagePath="lib\netcoreapp3.0" />
+      <None Include="$(OutputPath)\netcoreapp3.0\$(PackageId).pdb" Pack="True" PackagePath="lib\netcoreapp3.0" />
+      <None Include="$(OutputPath)\netcoreapp3.0\$(PackageId).xml" Pack="True" PackagePath="lib\netcoreapp3.0" />
+      <None Include="$(OutputPath)\netstandard1.0\$(PackageId).dll" Pack="True" PackagePath="lib\netstandard1.0" />
+      <None Include="$(OutputPath)\netstandard1.0\$(PackageId).pdb" Pack="True" PackagePath="lib\netstandard1.0" />
+      <None Include="$(OutputPath)\netstandard1.0\$(PackageId).xml" Pack="True" PackagePath="lib\netstandard1.0" />
+      <None Include="$(OutputPath)\net40\$(PackageId).dll" Pack="True" PackagePath="lib\net40" />
+      <None Include="$(OutputPath)\net40\$(PackageId).pdb" Pack="True" PackagePath="lib\net40" />
+      <None Include="$(OutputPath)\net40\$(PackageId).xml" Pack="True" PackagePath="lib\net40" />
+    </ItemGroup>
+  </Target>
+
+</Project>

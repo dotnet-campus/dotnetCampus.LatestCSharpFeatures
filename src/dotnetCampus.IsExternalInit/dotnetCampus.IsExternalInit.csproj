@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;netcoreapp3.0;netstandard1.0;net40</TargetFrameworks>
+    <RootNamespace>System.Diagnostics.CodeAnalysis</RootNamespace>
+    <Description>If you use C# 9.0 or later and want to use record types, this library adds public IsExternalInit attribute support for your project, allowing the new language feature to be propagated to other projects that reference this one.</Description>
+    <BuildOutputTargetFolder>Miscellaneous</BuildOutputTargetFolder>
+  </PropertyGroup>
+
+  <Target Name="IncludeAllDependencies" BeforeTargets="_GetPackageFiles">
+    <ItemGroup>
+      <None Include="_._" Pack="True" PackagePath="lib\net5.0" />
+      <None Include="$(OutputPath)\netcoreapp3.0\$(PackageId).dll" Pack="True" PackagePath="lib\netcoreapp3.0" />
+      <None Include="$(OutputPath)\netcoreapp3.0\$(PackageId).pdb" Pack="True" PackagePath="lib\netcoreapp3.0" />
+      <None Include="$(OutputPath)\netcoreapp3.0\$(PackageId).xml" Pack="True" PackagePath="lib\netcoreapp3.0" />
+      <None Include="$(OutputPath)\netstandard1.0\$(PackageId).dll" Pack="True" PackagePath="lib\netstandard1.0" />
+      <None Include="$(OutputPath)\netstandard1.0\$(PackageId).pdb" Pack="True" PackagePath="lib\netstandard1.0" />
+      <None Include="$(OutputPath)\netstandard1.0\$(PackageId).xml" Pack="True" PackagePath="lib\netstandard1.0" />
+      <None Include="$(OutputPath)\net40\$(PackageId).dll" Pack="True" PackagePath="lib\net40" />
+      <None Include="$(OutputPath)\net40\$(PackageId).pdb" Pack="True" PackagePath="lib\net40" />
+      <None Include="$(OutputPath)\net40\$(PackageId).xml" Pack="True" PackagePath="lib\net40" />
+    </ItemGroup>
+  </Target>
+
+</Project>
