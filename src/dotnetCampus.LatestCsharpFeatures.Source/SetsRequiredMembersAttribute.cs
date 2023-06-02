@@ -9,7 +9,12 @@ namespace System.Diagnostics.CodeAnalysis
     /// do not need to set any required members themselves.
     /// </summary>
     [AttributeUsage(AttributeTargets.Constructor, AllowMultiple = false, Inherited = false)]
-    internal sealed class SetsRequiredMembersAttribute : Attribute
+#if USE_PUBLIC_LATEST_CSHARP_FEATURES
+    public
+#else
+    internal
+#endif
+    sealed class SetsRequiredMembersAttribute : Attribute
     {
     }
 }

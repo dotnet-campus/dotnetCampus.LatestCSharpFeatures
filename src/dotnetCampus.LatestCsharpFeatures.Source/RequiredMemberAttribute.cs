@@ -8,8 +8,12 @@ namespace System.Runtime.CompilerServices
     /// Specifies that a type has required members or that a member is required.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
-
-    internal sealed class RequiredMemberAttribute : Attribute
+#if USE_PUBLIC_LATEST_CSHARP_FEATURES
+    public
+#else
+    internal
+#endif
+    sealed class RequiredMemberAttribute : Attribute
     {
     }
 
@@ -17,7 +21,12 @@ namespace System.Runtime.CompilerServices
     /// Indicates that compiler support for a particular feature is required for the location where this attribute is applied.
     /// </summary>
     [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = false)]
-    internal sealed class CompilerFeatureRequiredAttribute : Attribute
+#if USE_PUBLIC_LATEST_CSHARP_FEATURES
+    public
+#else
+    internal
+#endif
+    sealed class CompilerFeatureRequiredAttribute : Attribute
     {
         public CompilerFeatureRequiredAttribute(string featureName)
         {
