@@ -2,10 +2,10 @@
 
 | Language |
 | --- |
-| [简体中文](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures/blob/main/README.zh-CHS.txt) |
-| [繁體中文](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures/blob/main/README.zh-CHT.txt) |
-| [English](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures) |
-| [日本語](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures/blob/main/README.jp.txt) |
+| [简体中文](/docs/README.zh-CHS.txt) |
+| [繁體中文](/docs/README.zh-CHT.txt) |
+| [English](/README.md) |
+| [日本語](/docs/README.jp.txt) |
 
 此开源项目提供一系列 NuGet 包，让您可以在旧版本的 .NET（包括旧的 .NET Framework、.NET Standard，以及旧的 .NET Core App、.NET）中，使用最新的 C# 语言特性。
 

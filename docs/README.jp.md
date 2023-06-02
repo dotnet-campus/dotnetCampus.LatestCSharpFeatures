@@ -1,11 +1,11 @@
 # 最新のCSharpの特徴
 
-| 言語 |
+| Language |
 | --- |
-| [簡体字中国語](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures/blob/main/README.zh-CHS.txt) |
-| [繁体字中国語](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures/blob/main/README.zh-CHT.txt) |
-| [英語](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures/blob/main/README.en.txt) |
-| [日本語](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures/blob/main/README.jp.txt) |
+| [简体中文](/docs/README.zh-CHS.txt) |
+| [繁體中文](/docs/README.zh-CHT.txt) |
+| [English](/README.md) |
+| [日本語](/docs/README.jp.txt) |
 
 このオープンソースプロジェクトは一連のNuGetパッケージを提供し、古いバージョンの.NET（古い.NET Framework、.NET Standard、古い.NET Core App、.NETを含む）で最新のC#言語の特徴を使用できます。
 

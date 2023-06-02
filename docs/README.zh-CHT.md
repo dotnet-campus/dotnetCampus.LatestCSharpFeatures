@@ -1,11 +1,11 @@
 # 最新的 CSharp 特性
 
-| 語言 |
+| Language |
 | --- |
-| [簡體中文](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures/blob/main/README.zh-CHS.txt) |
-| [繁體中文](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures/blob/main/README.zh-CHT.txt) |
-| [English](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures/blob/main/README.en.txt) |
-| [日本語](https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures/blob/main/README.jp.txt) |
+| [简体中文](/docs/README.zh-CHS.txt) |
+| [繁體中文](/docs/README.zh-CHT.txt) |
+| [English](/README.md) |
+| [日本語](/docs/README.jp.txt) |
 
 此開源項目提供一系列 NuGet 包，讓您可以在舊版本的 .NET（包括舊的 .NET Framework、.NET Standard，以及舊的 .NET Core App、.NET）中，使用最新的 C# 語言特性。
 
