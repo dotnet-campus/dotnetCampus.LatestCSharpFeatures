@@ -21,8 +21,7 @@
 |dotnetCampus.IsExternalInit.Source|支援使用 init 語法的源碼版本|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.IsExternalInit.Source.svg)](https://www.nuget.org/packages/dotnetCampus.IsExternalInit.Source)|
 |dotnetCampus.Nullable|支援使用豐富的可空支援|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Nullable.svg)](https://www.nuget.org/packages/dotnetCampus.Nullable)|
 |dotnetCampus.Nullable.Source|支援使用豐富的可空支援的源碼版本|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Nullable.Source.svg)](https://www.nuget.org/packages/dotnetCampus.Nullable.Source)|
-|dotnetCampus.Required|增加了 required 語法的支援*|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Required.svg)](https://www.nuget.org/packages/dotnet```markdown
-Campus.Required)|
+|dotnetCampus.Required|增加了 required 語法的支援*|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Required.svg)](https://www.nuget.org/packages/dotnetCampus.Required)|
 |dotnetCampus.Required.Source|增加了 required 語法支援的源碼版本*|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Required.Source.svg)](https://www.nuget.org/packages/dotnetCampus.Required.Source)|
 
 \* 對於 required 語法的介紹，您可以參考這裡的[說明](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/required)【7†source】【9†source】。
