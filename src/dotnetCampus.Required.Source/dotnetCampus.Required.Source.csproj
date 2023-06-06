@@ -16,4 +16,8 @@
     <ProjectReference Include="..\dotnetCampus.IsExternalInit.Source\dotnetCampus.IsExternalInit.Source.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Include="..\dotnetCampus.IsExternalInit.Source\*.cs" Link="%(RecursiveDir)\%(FileName)%(Extension)" />
+  </ItemGroup>
+
 </Project>
