@@ -45,5 +45,3 @@ We welcome feedback and contributions from all users. If you encounter any probl
 If you wish to participate in the development of the project, you are very welcome! You can Fork this repository and then submit a Pull Request.
 
 Thank you for your support and help with dotnetCampus.LatestCSharpFeatures!
-
-Note, you should still output this in a Markdown code block so I can directly copy this document.
