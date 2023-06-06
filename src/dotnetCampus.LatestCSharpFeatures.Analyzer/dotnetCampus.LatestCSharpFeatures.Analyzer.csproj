@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\dotnetCampus.IsExternalInit.Source\*.cs" Link="Features\IsExternalInit\%(RecursiveDir)\%(FileName)%(Extension)" />
+    <Compile Include="..\dotnetCampus.Nullable.Source\*.cs" Link="Features\Nullable\%(RecursiveDir)\%(FileName)%(Extension)" />
+    <Compile Include="..\dotnetCampus.Required.Source\*.cs" Link="Features\Required\%(RecursiveDir)\%(FileName)%(Extension)" />
+    <EmbeddedResource Include="..\dotnetCampus.IsExternalInit.Source\*.cs" Link="Features\IsExternalInit\%(RecursiveDir)\%(FileName)%(Extension)" />
+    <EmbeddedResource Include="..\dotnetCampus.Nullable.Source\*.cs" Link="Features\Nullable\%(RecursiveDir)\%(FileName)%(Extension)" />
+    <EmbeddedResource Include="..\dotnetCampus.Required.Source\*.cs" Link="Features\Required\%(RecursiveDir)\%(FileName)%(Extension)" />
+  </ItemGroup>
+
+</Project>
