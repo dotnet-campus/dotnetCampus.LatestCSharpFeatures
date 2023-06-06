@@ -7,7 +7,7 @@ using Microsoft.CodeAnalysis.Text;
 using System.Text;
 
 /// <summary>
-/// 为 IPC 接口生成对应的代理（Proxy）和对接（Joint）。
+/// 生成 C# 新特性所需的类。
 /// </summary>
 [Generator(LanguageNames.CSharp)]
 public class FeatureGenerator : IIncrementalGenerator
