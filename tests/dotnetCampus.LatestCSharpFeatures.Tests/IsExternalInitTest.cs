@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace dotnetCampus.LatestCSharpFeatures.Tests;
 
 [TestClass]
@@ -8,5 +10,5 @@ public class IsExternalInitTest
     {
     }
 
-    //public record Foo(string Bar);
+    public record Foo(string Bar);
 }
