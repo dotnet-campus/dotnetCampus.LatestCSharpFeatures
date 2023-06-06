@@ -20,8 +20,7 @@
 |dotnetCampus.IsExternalInit|init構文の使用をサポート|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.IsExternalInit.svg)](https://www.nuget.org/packages/dotnetCampus.IsExternalInit)|
 |dotnetCampus.IsExternalInit.Source|init構文の使用をサポートするソースコードバージョン|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.IsExternalInit.Source.svg)](https://www.nuget.org/packages/dotnetCampus.IsExternalInit.Source)|
 |dotnetCampus.Nullable|豊富なnull許容型の使用をサポート|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Nullable.svg)](https://www.nuget.org/packages/dotnetCampus.Nullable)|
-|dotnetCampus.Nullable.Source|豊富なnull許容型の使用をサポートするソースコードバージョン|[![NuGet](https://img.shields.io/nuget/v/dotnetCamp```
-us.Nullable.Source.svg)](https://www.nuget.org/packages/dotnetCampus.Nullable.Source)|
+|dotnetCampus.Nullable.Source|豊富なnull許容型の使用をサポートするソースコードバージョン|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Nullable.Source.svg)](https://www.nuget.org/packages/dotnetCampus.Nullable.Source)|
 |dotnetCampus.Required|required構文のサポートを追加*|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Required.svg)](https://www.nuget.org/packages/dotnetCampus.Required)|
 |dotnetCampus.Required.Source|required構文のサポートを追加するソースコードバージョン*|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Required.Source.svg)](https://www.nuget.org/packages/dotnetCampus.Required.Source)|
 
