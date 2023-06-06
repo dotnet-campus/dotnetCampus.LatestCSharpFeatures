@@ -2,23 +2,23 @@
 
   <PropertyGroup>
     <TargetFrameworks>net5.0;netcoreapp3.0;netstandard1.0;net40</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>System.Diagnostics.CodeAnalysis</RootNamespace>
     <Description>If you use C# 8.0 or later and enable the nullable types, this library adds public nullable reference attributes to your project, allowing the new language feature to be propagated to other projects that reference this one.</Description>
+    <DefineConstants>$(DefineConstants);USE_PUBLIC_LATEST_CSHARP_FEATURES</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net5.0'">
     <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\dotnetCampus.Nullable.Source\*.cs" Link="%(RecursiveDir)\%(FileName)%(Extension)" />
+  </ItemGroup>
 
   <Target Name="IncludeAllDependencies" BeforeTargets="_GetPackageFiles">
     <ItemGroup>
       <None Include="_._" Pack="True" PackagePath="lib\net5.0" />
-      <None Include="$(OutputPath)\netcoreapp3.0\$(PackageId).dll" Pack="True" PackagePath="lib\netcoreapp3.0" />
-      <None Include="$(OutputPath)\netcoreapp3.0\$(PackageId).pdb" Pack="True" PackagePath="lib\netcoreapp3.0" />
-      <None Include="$(OutputPath)\netcoreapp3.0\$(PackageId).xml" Pack="True" PackagePath="lib\netcoreapp3.0" />
-      <None Include="$(OutputPath)\netstandard1.0\$(PackageId).dll" Pack="True" PackagePath="lib\netstandard1.0" />
-      <None Include="$(OutputPath)\netstandard1.0\$(PackageId).pdb" Pack="True" PackagePath="lib\netstandard1.0" />
-      <None Include="$(OutputPath)\netstandard1.0\$(PackageId).xml" Pack="True" PackagePath="lib\netstandard1.0" />
-      <None Include="$(OutputPath)\net40\$(PackageId).dll" Pack="True" PackagePath="lib\net40" />
-      <None Include="$(OutputPath)\net40\$(PackageId).pdb" Pack="True" PackagePath="lib\net40" />
-      <None Include="$(OutputPath)\net40\$(PackageId).xml" Pack="True" PackagePath="lib\net40" />
     </ItemGroup>
   </Target>
 

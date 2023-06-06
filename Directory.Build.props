@@ -13,7 +13,6 @@
     -->
     <NoWarn>$(NoWarn);NETSDK1138;NU5100</NoWarn>
 
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageOutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)</PackageOutputPath>
     <Company>dotnet campus（.NET 职业技术学院）</Company>
     <Authors>dotnet-campus</Authors>
