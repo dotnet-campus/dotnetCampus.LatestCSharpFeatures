@@ -7,7 +7,12 @@
     <LangVersion>latest</LangVersion>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
 
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <!--
+        NETSDK1138: 目标框架 netxx 不受支持，将来不会收到安全更新。
+        NU5100: 程序集不在 lib 文件夹内
+    -->
+    <NoWarn>$(NoWarn);NETSDK1138;NU5100</NoWarn>
+
     <PackageOutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)</PackageOutputPath>
     <Company>dotnet campus（.NET 职业技术学院）</Company>
     <Authors>dotnet-campus</Authors>

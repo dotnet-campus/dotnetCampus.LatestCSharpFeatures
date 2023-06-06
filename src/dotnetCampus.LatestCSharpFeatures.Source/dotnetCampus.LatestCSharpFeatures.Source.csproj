@@ -2,21 +2,21 @@
 
   <PropertyGroup>
     <TargetFrameworks>net5.0;netcoreapp3.0;netstandard1.0;net40</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>System.Diagnostics.CodeAnalysis</RootNamespace>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <PackageId>dotnetCampus.LatestCSharpFeatures</PackageId>
     <Description>This comprehensive package provides support for the latest C# language features in your project, enabling older .NET projects to use newer C# language constructs. Currently includes support for 'nullable', 'init', and 'required' keywords. The types introduced are internal, confining these features to the project itself without affecting other projects that reference it. By installing this package, you get all the newest C# features in one place, eliminating the need to install separate packages for each feature. Future updates will include more new features as they are released.</Description>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="dotnetCampus.SourceYard" Version="1.0.0-alpha03" PrivateAssets="all" />
+    <ProjectReference Condition="'$(Configuration)'=='net5.0'" Include="..\dotnetCampus.LatestCSharpFeatures.Analyzer\dotnetCampus.LatestCSharpFeatures.Analyzer.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
 
-  <!-- 源代码包暂时不支持 Link 过来的文件，所以这里先不用 Link -->
-  <!--<ItemGroup>
-    <Compile Include="..\dotnetCampus.Nullable\**\*.cs" Exclude="..\dotnetCampus.Nullable\**\obj\**\*.cs;..\dotnetCampus.Nullable\**\bin\**\*.cs" />
-    <Compile Include="..\dotnetCampus.IsExternalInit\**\*.cs" Exclude="..\dotnetCampus.IsExternalInit\**\obj\**\*.cs;..\dotnetCampus.IsExternalInit\**\bin\**\*.cs" />
-    <Compile Include="..\dotnetCampus.Required\**\*.cs" Exclude="..\dotnetCampus.Required\**\obj\**\*.cs;..\dotnetCampus.Required\**\bin\**\*.cs" />
-  </ItemGroup>-->
+  <!-- 生成 NuGet 包。 -->
+  <Target Name="_IncludeAllDependencies" BeforeTargets="_GetPackageFiles">
+    <ItemGroup>
+      <None Include="..\dotnetCampus.LatestCSharpFeatures.Analyzer\bin\$(Configuration)\**\*.dll" Pack="True" PackagePath="analyzers\dotnet\cs" />
+    </ItemGroup>
+  </Target>
 
 </Project>
