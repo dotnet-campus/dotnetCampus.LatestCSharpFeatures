@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net5.0;netcoreapp3.0;netstandard1.0;net40</TargetFrameworks>
+    <TargetFrameworks>net5.0;netcoreapp3.0;netstandard2.0;net40</TargetFrameworks>
     <RootNamespace>System.Diagnostics.CodeAnalysis</RootNamespace>
     <PackageId>dotnetCampus.Nullable</PackageId>
     <Description>If you use C# 8.0 or later and enable the nullable types, this '.Source' library adds internal nullable reference attributes to your project. This confines the new language feature to the project itself without affecting other projects that reference it.</Description>

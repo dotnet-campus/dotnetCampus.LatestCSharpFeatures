@@ -27,10 +27,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.LatestCSharpFe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.Nullable.Source", "src\dotnetCampus.Nullable.Source\dotnetCampus.Nullable.Source.csproj", "{72163C73-CBC5-4CB5-BDDF-769B7AFD6FAB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{19AD69CA-F593-4789-A51F-9E547033147D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternalUsageLibrary", "samples\InternalUsageLibrary\InternalUsageLibrary.csproj", "{DF937968-A710-4079-86D2-B2483FF3D81F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.LatestCSharpFeatures.Source", "src\dotnetCampus.LatestCSharpFeatures.Source\dotnetCampus.LatestCSharpFeatures.Source.csproj", "{16D75C29-3176-4CFD-A1B5-B5F24876B038}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IsExternalInit", "IsExternalInit", "{4E06689B-E73A-4A04-AAA0-7959A6EC06E6}"
@@ -43,7 +39,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CAB44C21-D58
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{878C1D77-0A77-44BD-847E-164188B10677}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetCampus.LatestCSharpFeatures.Tests", "tests\dotnetCampus.LatestCSharpFeatures.Tests\dotnetCampus.LatestCSharpFeatures.Tests.csproj", "{D10BF09A-FDF3-43F0-BD54-49A73554CDAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.LatestCSharpFeatures.Tests", "tests\dotnetCampus.LatestCSharpFeatures.Tests\dotnetCampus.LatestCSharpFeatures.Tests.csproj", "{D10BF09A-FDF3-43F0-BD54-49A73554CDAB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetCampus.LatestCSharpFeatures.Analyzer", "src\dotnetCampus.LatestCSharpFeatures.Analyzer\dotnetCampus.LatestCSharpFeatures.Analyzer.csproj", "{642FA0CA-E827-4D96-9358-D596CD87DAF4}"
 EndProject
@@ -81,10 +77,6 @@ Global
 		{72163C73-CBC5-4CB5-BDDF-769B7AFD6FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72163C73-CBC5-4CB5-BDDF-769B7AFD6FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72163C73-CBC5-4CB5-BDDF-769B7AFD6FAB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF937968-A710-4079-86D2-B2483FF3D81F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF937968-A710-4079-86D2-B2483FF3D81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF937968-A710-4079-86D2-B2483FF3D81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF937968-A710-4079-86D2-B2483FF3D81F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{16D75C29-3176-4CFD-A1B5-B5F24876B038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{16D75C29-3176-4CFD-A1B5-B5F24876B038}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16D75C29-3176-4CFD-A1B5-B5F24876B038}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -108,7 +100,6 @@ Global
 		{6ED76C7A-A16A-45A5-BC1F-91A880839C31} = {F0CBB519-BB38-4104-B840-4076BB206E36}
 		{4EBF62CB-613E-4496-B890-B1F433ED7581} = {F0CBB519-BB38-4104-B840-4076BB206E36}
 		{72163C73-CBC5-4CB5-BDDF-769B7AFD6FAB} = {CCAAE7A8-1879-4F67-98AA-D837C80227A2}
-		{DF937968-A710-4079-86D2-B2483FF3D81F} = {19AD69CA-F593-4789-A51F-9E547033147D}
 		{4E06689B-E73A-4A04-AAA0-7959A6EC06E6} = {CAB44C21-D58C-4732-B9D8-60B1DAE82BEF}
 		{CCAAE7A8-1879-4F67-98AA-D837C80227A2} = {CAB44C21-D58C-4732-B9D8-60B1DAE82BEF}
 		{F0CBB519-BB38-4104-B840-4076BB206E36} = {CAB44C21-D58C-4732-B9D8-60B1DAE82BEF}
