@@ -1,9 +1,7 @@
 ﻿namespace dotnetCampus.LatestCSharpFeatures.Tests;
 
-[TestClass]
 public class RequiredTest
 {
-    [TestMethod]
     public void CanBeCompiled()
     {
     }

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0;net5.0;netcoreapp3.0;netstandard1.0;net40</TargetFrameworks>
+    <TargetFrameworks>net7.0;net5.0;netcoreapp3.0;netstandard2.0;net40</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>System.Diagnostics.CodeAnalysis</RootNamespace>
     <Description>If you use C# 9.0 or later and want to use record types, this library adds public IsExternalInit attribute support for your project, allowing the new language feature to be propagated to other projects that reference this one.</Description>

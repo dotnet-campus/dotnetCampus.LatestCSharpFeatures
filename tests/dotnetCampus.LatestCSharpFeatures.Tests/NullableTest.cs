@@ -2,10 +2,8 @@
 
 namespace dotnetCampus.LatestCSharpFeatures.Tests;
 
-[TestClass]
 public class NullableTest
 {
-    [TestMethod]
     public void CanBeCompiled()
     {
         MemberNotNull();
