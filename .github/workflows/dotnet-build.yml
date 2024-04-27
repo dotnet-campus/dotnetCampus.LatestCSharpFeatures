@@ -17,7 +17,7 @@ jobs:
           8.0.x
 
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: dotnet build --configuration release
 
     - name: Test
-      run: dotnet test --configuration Release
+      run: dotnet test --configuration release

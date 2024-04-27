@@ -27,8 +27,8 @@ jobs:
 
     - name: Build with dotnet
       run: |
-        dotnet build --configuration Release
-        dotnet pack --configuration Release --no-build
+        dotnet build --configuration release
+        dotnet pack --configuration release --no-build
 
     - name: Install Nuget
       uses: nuget/setup-nuget@v1
@@ -41,5 +41,5 @@ jobs:
 
     - name: Push generated package to GitHub registry
       run: |
-        nuget push .\bin\Release\*.nupkg -Source github -SkipDuplicate
-        nuget push .\bin\Release\*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NugetKey }} 
+        nuget push .\artifacts\package\release\*.nupkg -Source github -SkipDuplicate
+        nuget push .\artifacts\package\release\*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NugetKey }} 
