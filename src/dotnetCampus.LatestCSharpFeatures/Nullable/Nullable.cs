@@ -1,215 +1,175 @@
-﻿namespace System.Diagnostics.CodeAnalysis
+﻿// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+
+namespace System.Diagnostics.CodeAnalysis
 {
-#if NETCOREAPP3_0 || NETCOREAPP3_1 || NET5_0_OR_GREATER
+#if NETSTANDARD2_1 || NETCOREAPP3_0 || NETCOREAPP3_1 || NET5_0_OR_GREATER
 #else
-    /// <summary>
-    /// 标记一个不可空的输入实际上是可以传入 null 的。
-    /// </summary>
+    /// <summary>Specifies that null is allowed as an input even if the corresponding type disallows it.</summary>
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.Property, Inherited = false)]
 #if USE_PUBLIC_LATEST_CSHARP_FEATURES
     public
 #else
     internal
 #endif
-    sealed class AllowNullAttribute : Attribute { }
+        sealed class AllowNullAttribute : Attribute { }
 
-    /// <summary>
-    /// 标记一个可空的输入实际上不应该传入 null。
-    /// </summary>
+    /// <summary>Specifies that null is disallowed as an input even if the corresponding type allows it.</summary>
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.Property, Inherited = false)]
 #if USE_PUBLIC_LATEST_CSHARP_FEATURES
     public
 #else
     internal
 #endif
-    sealed class DisallowNullAttribute : Attribute { }
+        sealed class DisallowNullAttribute : Attribute { }
 
-    /// <summary>
-    /// 标记一个非空的返回值实际上可能会返回 null，返回值包括输出参数。
-    /// </summary>
+    /// <summary>Specifies that an output may be null even if the corresponding type disallows it.</summary>
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.ReturnValue, Inherited = false)]
 #if USE_PUBLIC_LATEST_CSHARP_FEATURES
     public
 #else
     internal
 #endif
-    sealed class MaybeNullAttribute : Attribute { }
+        sealed class MaybeNullAttribute : Attribute { }
 
-    /// <summary>
-    /// 标记一个可空的返回值实际上是不可能返回 null 的，返回值包括输出参数。
-    /// </summary>
+    /// <summary>Specifies that an output will not be null even if the corresponding type allows it. Specifies that an input argument was not null when the call returns.</summary>
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.ReturnValue, Inherited = false)]
 #if USE_PUBLIC_LATEST_CSHARP_FEATURES
     public
 #else
     internal
 #endif
-    sealed class NotNullAttribute : Attribute { }
+        sealed class NotNullAttribute : Attribute { }
 
-    /// <summary>
-    /// 当返回指定的 true/false 时某个输出参数才可能为 null，而返回相反的值时那个输出参数则不可为 null。
-    /// </summary>
+    /// <summary>Specifies that when a method returns <see cref="ReturnValue"/>, the parameter may be null even if the corresponding type disallows it.</summary>
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
 #if USE_PUBLIC_LATEST_CSHARP_FEATURES
     public
 #else
     internal
 #endif
-    sealed class MaybeNullWhenAttribute : Attribute
+        sealed class MaybeNullWhenAttribute : Attribute
     {
-        /// <summary>
-        /// 使用 true 或者 false 决定输出参数是否可能为 null。
-        /// </summary>
-        /// <param name="returnValue">如果方法返回值等于这个值，那么输出参数则可能为 null，否则输出参数是不可为 null 的。</param>
+        /// <summary>Initializes the attribute with the specified return value condition.</summary>
+        /// <param name="returnValue">
+        /// The return value condition. If the method returns this value, the associated parameter may be null.
+        /// </param>
         public MaybeNullWhenAttribute(bool returnValue) => ReturnValue = returnValue;
 
-        /// <summary>
-        /// 获取返回值决定是否可为空的那个判断值。
-        /// </summary>
+        /// <summary>Gets the return value condition.</summary>
         public bool ReturnValue { get; }
     }
 
-    /// <summary>
-    /// 当返回指定的 true/false 时，某个输出参数不可为 null，而返回相反的值时那个输出参数则可能为 null。
-    /// </summary>
+    /// <summary>Specifies that when a method returns <see cref="ReturnValue"/>, the parameter will not be null even if the corresponding type allows it.</summary>
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
 #if USE_PUBLIC_LATEST_CSHARP_FEATURES
     public
 #else
     internal
 #endif
-    sealed class NotNullWhenAttribute : Attribute
+        sealed class NotNullWhenAttribute : Attribute
     {
-        /// <summary>
-        /// 使用 true 或者 false 决定输出参数是否不可为 null。
-        /// </summary>
+        /// <summary>Initializes the attribute with the specified return value condition.</summary>
         /// <param name="returnValue">
-        /// 如果方法或属性的返回值等于这个值，那么输出参数则不可为 null，否则输出参数是可能为 null 的。
+        /// The return value condition. If the method returns this value, the associated parameter will not be null.
         /// </param>
         public NotNullWhenAttribute(bool returnValue) => ReturnValue = returnValue;
 
-        /// <summary>
-        /// 获取返回值决定是否不可为空的那个判断值。
-        /// </summary>
+        /// <summary>Gets the return value condition.</summary>
         public bool ReturnValue { get; }
     }
 
-    /// <summary>
-    /// 指定的参数传入 null 时才可能返回 null，指定的参数传入非 null 时就不可能返回 null。
-    /// </summary>
+    /// <summary>Specifies that the output will be non-null if the named parameter is non-null.</summary>
     [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.ReturnValue, AllowMultiple = true, Inherited = false)]
 #if USE_PUBLIC_LATEST_CSHARP_FEATURES
     public
 #else
     internal
 #endif
-    sealed class NotNullIfNotNullAttribute : Attribute
+        sealed class NotNullIfNotNullAttribute : Attribute
     {
-        /// <summary>
-        /// 使用一个参数名称决定返回值是否可能为 null。
-        /// </summary>
+        /// <summary>Initializes the attribute with the associated parameter name.</summary>
         /// <param name="parameterName">
-        /// 指定一个方法传入参数的名称，当这个参数传入非 null 时，输出参数或者返回值就是非 null；而这个参数传入可为 null 时，输出参数或者返回值就可为 null。
+        /// The associated parameter name.  The output will be non-null if the argument to the parameter specified is non-null.
         /// </param>
         public NotNullIfNotNullAttribute(string parameterName) => ParameterName = parameterName;
 
-        /// <summary>
-        /// 获取决定输出参数或者返回值是否可能为空的那个参数名称。
-        /// </summary>
+        /// <summary>Gets the associated parameter name.</summary>
         public string ParameterName { get; }
     }
 
-    /// <summary>
-    /// 指定一个方法是不可能返回的。
-    /// </summary>
+    /// <summary>Applied to a method that will never return under any circumstance.</summary>
     [AttributeUsage(AttributeTargets.Method, Inherited = false)]
 #if USE_PUBLIC_LATEST_CSHARP_FEATURES
     public
 #else
     internal
 #endif
-    sealed class DoesNotReturnAttribute : Attribute { }
+        sealed class DoesNotReturnAttribute : Attribute { }
 
-    /// <summary>
-    /// 在方法的输入参数上指定一个条件，当这个参数传入了指定的 true/false 时方法不可能返回。
-    /// </summary>
+    /// <summary>Specifies that the method will not return if the associated Boolean parameter is passed the specified value.</summary>
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
 #if USE_PUBLIC_LATEST_CSHARP_FEATURES
     public
 #else
     internal
 #endif
-    sealed class DoesNotReturnIfAttribute : Attribute
+        sealed class DoesNotReturnIfAttribute : Attribute
     {
-        /// <summary>
-        /// 使用 true/false 决定方法是否可能返回。
-        /// </summary>
+        /// <summary>Initializes the attribute with the specified parameter value.</summary>
         /// <param name="parameterValue">
-        /// 在方法的输入参数上指定一个条件，当这个参数传入的值等于这里设定的值时，方法不可能返回。
+        /// The condition parameter value. Code after the method will be considered unreachable by diagnostics if the argument to
+        /// the associated parameter matches this value.
         /// </param>
         public DoesNotReturnIfAttribute(bool parameterValue) => ParameterValue = parameterValue;
 
-        /// <summary>
-        /// 获取决定方法是否可返回的那个参数的值。
-        /// </summary>
+        /// <summary>Gets the condition parameter value.</summary>
         public bool ParameterValue { get; }
     }
 #endif
 
 #if NET5_0_OR_GREATER
 #else
-    /// <summary>
-    /// 调用了此方法后，即可保证列表中所列出的字段和属性成员将不会为 null。
-    /// </summary>
+    /// <summary>Specifies that the method or property will ensure that the listed field and property members have not-null values.</summary>
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
 #if USE_PUBLIC_LATEST_CSHARP_FEATURES
     public
 #else
     internal
 #endif
-    sealed class MemberNotNullAttribute : Attribute
+        sealed class MemberNotNullAttribute : Attribute
     {
-        /// <summary>
-        /// 指定调用了此方法后，所列出的字段和属性成员将不会为 null。
-        /// </summary>
+        /// <summary>Initializes the attribute with a field or property member.</summary>
         /// <param name="member">
-        /// 将保证不会为 null 的字段或属性名称。
+        /// The field or property member that is promised to be not-null.
         /// </param>
         public MemberNotNullAttribute(string member) => Members = new[] { member };
 
-        /// <summary>
-        /// 指定调用了此方法后，所列出的字段和属性成员将不会为 null。
-        /// </summary>
+        /// <summary>Initializes the attribute with the list of field and property members.</summary>
         /// <param name="members">
-        /// 将保证不会为 null 的字段或属性名称列表。
+        /// The list of field and property members that are promised to be not-null.
         /// </param>
         public MemberNotNullAttribute(params string[] members) => Members = members;
 
-        /// <summary>
-        /// 调用了此方法后保证不会为 null 的字段或属性名称列表。
-        /// </summary>
+        /// <summary>Gets field or property member names.</summary>
         public string[] Members { get; }
     }
 
-    /// <summary>
-    /// 当返回指定的 true/false 时，即可保证列表中所列出的字段和属性成员将不会为 null。
-    /// </summary>
+    /// <summary>Specifies that the method or property will ensure that the listed field and property members have not-null values when returning with the specified return value condition.</summary>
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
 #if USE_PUBLIC_LATEST_CSHARP_FEATURES
     public
 #else
     internal
 #endif
-    sealed class MemberNotNullWhenAttribute : Attribute
+        sealed class MemberNotNullWhenAttribute : Attribute
     {
-        /// <summary>
-        /// 使用 true 或者 false 决定是否所列出的字段和属性成员将不会为 null。
-        /// </summary>
+        /// <summary>Initializes the attribute with the specified return value condition and a field or property member.</summary>
         /// <param name="returnValue">
-        /// 如果方法或属性的返回值等于这个值，那么所列出的字段和属性成员将不会为 null。
+        /// The return value condition. If the method returns this value, the associated parameter will not be null.
         /// </param>
         /// <param name="member">
-        /// 将保证不会为 null 的字段或属性名称列表。
+        /// The field or property member that is promised to be not-null.
         /// </param>
         public MemberNotNullWhenAttribute(bool returnValue, string member)
         {
@@ -217,14 +177,12 @@
             Members = new[] { member };
         }
 
-        /// <summary>
-        /// 使用 true 或者 false 决定是否所列出的字段和属性成员将不会为 null。
-        /// </summary>
+        /// <summary>Initializes the attribute with the specified return value condition and list of field and property members.</summary>
         /// <param name="returnValue">
-        /// 如果方法或属性的返回值等于这个值，那么所列出的字段和属性成员将不会为 null。
+        /// The return value condition. If the method returns this value, the associated parameter will not be null.
         /// </param>
         /// <param name="members">
-        /// 将保证不会为 null 的字段或属性名称列表。
+        /// The list of field and property members that are promised to be not-null.
         /// </param>
         public MemberNotNullWhenAttribute(bool returnValue, params string[] members)
         {
@@ -232,14 +190,10 @@
             Members = members;
         }
 
-        /// <summary>
-        /// 获取返回值决定是否不可为空的那个判断值。
-        /// </summary>
+        /// <summary>Gets the return value condition.</summary>
         public bool ReturnValue { get; }
 
-        /// <summary>
-        /// 调用了此方法后保证不会为 null 的字段或属性名称列表。
-        /// </summary>
+        /// <summary>Gets field or property member names.</summary>
         public string[] Members { get; }
     }
 #endif
