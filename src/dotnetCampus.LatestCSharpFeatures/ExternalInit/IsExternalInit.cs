@@ -1,7 +1,5 @@
 ﻿#if NET5_0_OR_GREATER
-// .NET 5.0 开始已包含 IsExternalInit。
 #else
-// 旧框架需要包含 IsExternalInit。
 using System.ComponentModel;
 
 namespace System.Runtime.CompilerServices

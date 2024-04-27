@@ -1,7 +1,6 @@
 ﻿namespace System.Diagnostics.CodeAnalysis
 {
 #if NETCOREAPP3_0 || NETCOREAPP3_1 || NET5_0_OR_GREATER
-    // 新框架都包含基本的 Nullable Attributes。
 #else
     /// <summary>
     /// 标记一个不可空的输入实际上是可以传入 null 的。
@@ -158,7 +157,6 @@
 #endif
 
 #if NET5_0_OR_GREATER
-    // .NET 5.0 开始已包含更多 Nullable Attributes。
 #else
     /// <summary>
     /// 调用了此方法后，即可保证列表中所列出的字段和属性成员将不会为 null。

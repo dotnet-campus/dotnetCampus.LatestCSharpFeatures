@@ -14,12 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\dotnetCampus.IsExternalInit.Source\*.cs" Link="Features\IsExternalInit\%(RecursiveDir)\%(FileName)%(Extension)" />
-    <Compile Include="..\dotnetCampus.Nullable.Source\*.cs" Link="Features\Nullable\%(RecursiveDir)\%(FileName)%(Extension)" />
-    <Compile Include="..\dotnetCampus.Required.Source\*.cs" Link="Features\Required\%(RecursiveDir)\%(FileName)%(Extension)" />
-    <EmbeddedResource Include="..\dotnetCampus.IsExternalInit.Source\*.cs" Link="Features\IsExternalInit\%(RecursiveDir)\%(FileName)%(Extension)" />
-    <EmbeddedResource Include="..\dotnetCampus.Nullable.Source\*.cs" Link="Features\Nullable\%(RecursiveDir)\%(FileName)%(Extension)" />
-    <EmbeddedResource Include="..\dotnetCampus.Required.Source\*.cs" Link="Features\Required\%(RecursiveDir)\%(FileName)%(Extension)" />
+    <Compile Include="..\dotnetCampus.LatestCSharpFeatures\**\*.cs" Link="Features\%(RecursiveDir)\%(FileName)%(Extension)" />
+    <EmbeddedResource Include="..\dotnetCampus.LatestCSharpFeatures\**\*.cs" Link="Features\%(RecursiveDir)\%(FileName)%(Extension)" />
+    <Compile Remove="..\dotnetCampus.LatestCSharpFeatures\obj\**" />
+    <EmbeddedResource Remove="..\dotnetCampus.LatestCSharpFeatures\obj\**" />
   </ItemGroup>
 
 </Project>
