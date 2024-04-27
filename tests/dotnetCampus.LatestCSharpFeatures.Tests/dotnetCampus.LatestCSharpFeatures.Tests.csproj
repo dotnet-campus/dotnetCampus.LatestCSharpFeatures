@@ -8,6 +8,14 @@
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!--
+        NETSDK1138: 目标框架 netxx 不受支持，将来不会收到安全更新。
+        NU5100: 重复的 PackageReference，包含了相同的包引用。
+    -->
+    <NoWarn>$(NoWarn);NETSDK1138;NU1504</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="dotnetCampus.LatestCSharpFeatures.Source" Version="11.0.0-alpha03" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />

@@ -2,25 +2,33 @@
 
   <Import Project="build\Version.props" />
 
+  <!-- 框架和语言信息 -->
   <PropertyGroup>
-
     <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <Deterministic>true</Deterministic>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <ArtifactsPath>$(MSBuildThisFileDirectory)artifacts</ArtifactsPath>
+    <RepositoryRoot>$(MSBuildThisFileDirectory)</RepositoryRoot>
+  </PropertyGroup>
 
+  <PropertyGroup>
     <!--
         NETSDK1138: 目标框架 netxx 不受支持，将来不会收到安全更新。
         NU5100: 程序集不在 lib 文件夹内
     -->
     <NoWarn>$(NoWarn);NETSDK1138;NU5100</NoWarn>
+  </PropertyGroup>
 
-    <PackageOutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)</PackageOutputPath>
-    <Company>dotnet campus（.NET 职业技术学院）</Company>
+  <!--库信息 -->
+  <PropertyGroup>
+    <Description>提供统一的日志记录方法。使用源生成器允许库的作者在不依赖本日志库的情况下完成日志的记录，并且还能对接到产品中完成日志的统一输出。</Description>
     <Authors>dotnet-campus</Authors>
+    <Company>dotnet campus（.NET 职业技术学院）</Company>
+    <Copyright>Copyright © 2023-2024 dotnet campus, All Rights Reserved.</Copyright>
+    <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures</RepositoryUrl>
     <PackageProjectUrl>https://github.com/dotnet-campus/dotnetCampus.LatestCSharpFeatures</PackageProjectUrl>
-    <RepositoryType>git</RepositoryType>
-    <Copyright>Copyright © 2023 dotnet campus, All Rights Reserved.</Copyright>
-
   </PropertyGroup>
 
   <ItemGroup>
