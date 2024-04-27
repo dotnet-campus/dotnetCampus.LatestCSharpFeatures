@@ -10,14 +10,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.5.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Include="..\dotnetCampus.LatestCSharpFeatures\**\*.cs" Link="Features\%(RecursiveDir)\%(FileName)%(Extension)" />
     <EmbeddedResource Include="..\dotnetCampus.LatestCSharpFeatures\**\*.cs" Link="Features\%(RecursiveDir)\%(FileName)%(Extension)" />
-    <Compile Remove="..\dotnetCampus.LatestCSharpFeatures\obj\**" />
-    <EmbeddedResource Remove="..\dotnetCampus.LatestCSharpFeatures\obj\**" />
   </ItemGroup>
 
 </Project>
