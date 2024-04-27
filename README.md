@@ -15,8 +15,8 @@ This open-source project provides a NuGet package, dotnetCampus.LatestCSharpFeat
 Simply install the dotnetCampus.LatestCSharpFeatures NuGet package.
 
 ```xml
-<!-- By default, dotnetCampus.LatestCSharpFeatures introduces C# new features as internal modifiers into the current project.
-     Using this conditional compilation symbol, you can set these types as public, so that other projects referencing this project can also use these new features. -->
+<!-- Since dotnetCampus.LatestCSharpFeatures only contains source generators, it does not introduce any runtime dependencies.
+     We can set it to PrivateAssets="all" to avoid passing it on to other projects. -->
 <PackageReference Include="dotnetCampus.LatestCSharpFeatures" Version="12.0.0" PrivateAssets="all" />
 ```
 
