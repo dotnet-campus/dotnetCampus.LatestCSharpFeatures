@@ -1,47 +1,31 @@
 # Latest CSharp Features
 
-| Language |
-| --- |
+| Language                           |
+| ---------------------------------- |
 | [简体中文](/docs/README.zh-CHS.md) |
 | [繁體中文](/docs/README.zh-CHT.md) |
-| [English](/README.md) |
-| [日本語](/docs/README.jp.md) |
+| [English](/README.md)              |
 
-This open-source project provides a series of NuGet packages that allow you to use the latest C# language features in older versions of .NET (including older .NET Framework, .NET Standard, as well as older .NET Core App, .NET).
+[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.LatestCSharpFeatures.svg)](https://www.nuget.org/packages/dotnetCampus.LatestCSharpFeatures)
 
-## NuGet Packages
-
-We currently offer 8 NuGet packages for you to choose from based on your needs.
-
-|Package Name|Function|Link|
-|---|---|---|
-|dotnetCampus.LatestCSharpFeatures|All-in-one package, includes all new C# features|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.LatestCSharpFeatures.svg)](https://www.nuget.org/packages/dotnetCampus.LatestCSharpFeatures)|
-|dotnetCampus.LatestCSharpFeatures.Source|Source code version of the all-in-one package|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.LatestCSharpFeatures.Source.svg)](https://www.nuget.org/packages/dotnetCampus.LatestCSharpFeatures.Source)|
-|dotnetCampus.IsExternalInit|Supports the use of init syntax|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.IsExternalInit.svg)](https://www.nuget.org/packages/dotnetCampus.IsExternalInit)|
-|dotnetCampus.IsExternalInit.Source|Source code version that supports the use of init syntax|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.IsExternalInit.Source.svg)](https://www.nuget.org/packages/dotnetCampus.IsExternalInit.Source)|
-|dotnetCampus.Nullable|Supports the use of rich nullable features|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Nullable.svg)](https://www.nuget.org/packages/dotnetCampus.Nullable)|
-|dotnetCampus.Nullable.Source|Source code version that supports the use of rich nullable features|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Nullable.Source.svg)](https://www.nuget.org/packages/dotnetCampus.Nullable.Source)|
-|dotnetCampus.Required|Adds support for the required syntax*|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Required.svg)](https://www.nuget.org/packages/dotnetCampus.Required)|
-|dotnetCampus.Required.Source|Source code version that adds support for the required syntax*|[![NuGet](https://img.shields.io/nuget/v/dotnetCampus.Required.Source.svg)](https://www.nuget.org/packages/dotnetCampus.Required.Source)|
-
-\* For an introduction to the required syntax, you can refer to this [description](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/required)【7†source】【9†source】.
+This open-source project provides a NuGet package, dotnetCampus.LatestCSharpFeatures, which allows you to use the latest C# language features in older versions of .NET, including the old .NET Framework, .NET Standard, and older versions of .NET Core App and .NET.
 
 ## How to Use
 
-For both the all-in-one package and the single-feature packages, we provide two versions. Packages without the .Source suffix will generate a dll, so all projects that reference this project can use these new features. Packages with the .Source suffix are only effective for the project where the package is installed, and there are no additional dlls in the final generated project.
+Simply install the dotnetCampus.LatestCSharpFeatures NuGet package.
 
-If you want the .Source package to be effective for other projects that reference this project, you can add a conditional compilation symbol in the csproj file:
+If you want these new language features to also be effective for other projects that reference this project, you can add a conditional compilation symbol in the csproj file:
 
 ```xml
-<!-- By default, installing packages with a .Source suffix imports the new C# features into the current project as internal.
-     By using this conditional compilation symbol, these types can be set as public, allowing other projects referencing this project to also use these new features. -->
+<!-- By default, dotnetCampus.LatestCSharpFeatures introduces C# new features as internal modifiers into the current project.
+     Using this conditional compilation symbol, you can set these types as public, so that other projects referencing this project can also use these new features. -->
 <DefineConstants>$(DefineConstants);USE_PUBLIC_LATEST_CSHARP_FEATURES</DefineConstants>
 ```
 
 ## Feedback and Contributions
 
-We welcome feedback and contributions from all users. If you encounter any problems during use, or have any suggestions for improvement, you can submit them via GitHub Issues.
+We welcome feedback and contributions from all users. If you encounter any problems during use, or have any suggestions for improvements, you can submit them via GitHub Issues.
 
-If you wish to participate in the development of the project, you are very welcome! You can Fork this repository and then submit a Pull Request.
+If you wish to participate in the development of the project, you are also very welcome! You can Fork this repository and then submit a Pull Request.
 
 Thank you for your support and help with dotnetCampus.LatestCSharpFeatures!
