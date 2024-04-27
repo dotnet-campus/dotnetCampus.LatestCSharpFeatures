@@ -19,8 +19,16 @@ public class FeatureGenerator : IIncrementalGenerator
 
     private void OnExecute(SourceProductionContext context, AnalyzerConfigOptionsProvider provider)
     {
-        GenerateFeatureSource(context, provider, "IsExternalInit");
+        // .NET Core 1.0 / .NET Framework 4.7 / .NET Standard 2.0 才开始支持 ValueTuple。
+        GenerateFeatureSource(context, provider, "ValueTuple");
+
+        // .NET Core 3.0 / .NET Standard 2.1 才开始支持 Nullable；.NET 5.0 开始支持更多。
         GenerateFeatureSource(context, provider, "Nullable");
+
+        // .NET 5.0 才开始支持 ExternalInit
+        GenerateFeatureSource(context, provider, "ExternalInit");
+
+        // .NET 7.0 才开始支持 SetsRequiredMembersAttribute
         GenerateFeatureSource(context, provider, "Required");
     }
 
