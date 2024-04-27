@@ -1,7 +1,7 @@
 ﻿#pragma warning disable CS8600
 #pragma warning disable CS8603
 
-#if NETSTANDARD2_0_OR_GREATER || NETCOREAPP3_0 || NETCOREAPP3_1 || NET5_0_OR_GREATER
+#if NETCOREAPP3_0 || NETCOREAPP3_1 || NET5_0_OR_GREATER || NETSTANDARD2_0_OR_GREATER || NET47 || NET471 || NET472 || NET48 || NET481
 #else
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
