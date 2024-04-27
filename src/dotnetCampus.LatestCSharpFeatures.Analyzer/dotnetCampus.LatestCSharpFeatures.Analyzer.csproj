@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\dotnetCampus.LatestCSharpFeatures\**\*.cs" Link="Features\%(RecursiveDir)\%(FileName)%(Extension)" />
+    <Compile Include="..\dotnetCampus.LatestCSharpFeatures\ExternalInit\*.cs" Link="Features\ExternalInit\%(RecursiveDir)\%(FileName)%(Extension)" />
     <EmbeddedResource Include="..\dotnetCampus.LatestCSharpFeatures\**\*.cs" Link="Features\%(RecursiveDir)\%(FileName)%(Extension)" />
   </ItemGroup>
 
