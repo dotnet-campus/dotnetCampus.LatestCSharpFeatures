@@ -14,11 +14,17 @@ This open-source project provides a NuGet package, dotnetCampus.LatestCSharpFeat
 
 Simply install the dotnetCampus.LatestCSharpFeatures NuGet package.
 
-If you want these new language features to also be effective for other projects that reference this project, you can add a conditional compilation symbol in the csproj file:
-
 ```xml
 <!-- By default, dotnetCampus.LatestCSharpFeatures introduces C# new features as internal modifiers into the current project.
      Using this conditional compilation symbol, you can set these types as public, so that other projects referencing this project can also use these new features. -->
+<PackageReference Include="dotnetCampus.LatestCSharpFeatures" Version="12.0.0" PrivateAssets="all" />
+```
+
+If you want these new language features to also be effective for other projects that reference this project, you can add a conditional compilation symbol in the csproj file:
+
+```xml
+<!-- By default, dotnetCampus.LatestCSharpFeatures introduces new C# features into the current project using the internal modifier.
+     By using this conditional compilation symbol, these types can be set to public, allowing other projects referencing this project to also use these new features. -->
 <DefineConstants>$(DefineConstants);USE_PUBLIC_LATEST_CSHARP_FEATURES</DefineConstants>
 ```
 

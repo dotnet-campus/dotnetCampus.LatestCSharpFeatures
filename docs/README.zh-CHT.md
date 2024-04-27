@@ -14,11 +14,17 @@
 
 直接安裝 dotnetCampus.LatestCSharpFeatures NuGet 包即可。
 
-如果您希望這些新語言特性對其他引用了此項目的項目也生效，可以在 csproj 文件中增加一個條件編譯符：
-
 ```xml
 <!-- 由於 dotnetCampus.LatestCSharpFeatures 只含源生成器，因此不會引入任何運行時依賴項。
      我們可以將其設置為 PrivateAssets="all"，以避免將其傳遞給其他項目。 -->
+<PackageReference Include="dotnetCampus.LatestCSharpFeatures" Version="12.0.0" PrivateAssets="all" />
+```
+
+如果您希望這些新語言特性對其他引用了此項目的項目也生效，可以在 csproj 文件中增加一個條件編譯符：
+
+```xml
+<!-- 預設情況下，dotnetCampus.LatestCSharpFeatures 會將 C# 新特性以 internal 修飾符引入當前項目。
+     使用此條件編譯符，可以將這些類型設為 public，使得引用此項目的其他項目也能使用這些新特性。 -->
 <DefineConstants>$(DefineConstants);USE_PUBLIC_LATEST_CSHARP_FEATURES</DefineConstants>
 ```
 
