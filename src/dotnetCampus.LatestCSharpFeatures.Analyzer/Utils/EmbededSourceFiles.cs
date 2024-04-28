@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 
 namespace dotnetCampus.LatestCSharpFeatures.Analyzer;
+
 /// <summary>
 /// 从嵌入的资源中寻找源代码。
 /// </summary>
@@ -11,7 +12,7 @@ internal static class EmbededSourceFiles
     /// </summary>
     /// <param name="folderName">资源文件夹名称。</param>
     /// <returns></returns>
-    internal static IEnumerable<EmbededSourceFile> Enumerate(string folderName)
+    internal static IEnumerable<EmbeddedSourceFile> Enumerate(string folderName)
     {
         // 资源字符串格式为："{Namespace}.{Folder}.{filename}.{Extension}"
         var desiredFolder = $"{typeof(EmbededSourceFiles).Namespace}.{folderName}";

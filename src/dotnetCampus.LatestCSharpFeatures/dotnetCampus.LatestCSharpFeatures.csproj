@@ -1,25 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0;net5.0;netcoreapp3.0;netstandard2.0;net40</TargetFrameworks>
+    <TargetFrameworks>net8.0;netstandard2.0;net40</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>System.Diagnostics.CodeAnalysis</RootNamespace>
-    <Description>This comprehensive package provides support for the latest C# language features in your project, enabling older .NET projects to use newer C# language constructs. Currently includes support for 'nullable', 'init', and 'required' keywords. The types introduced are public, allowing these features to propagate to other projects that reference this one. By installing this package, you get all the newest C# features in one place, eliminating the need to install separate packages for each feature. Future updates will include more new features as they are released.</Description>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(TargetFramework)'=='net7.0'">
+    <Description>This comprehensive package provides support for the latest C# language features in your project, enabling older .NET projects to use newer C# language constructs. Currently includes support for 'nullable', 'init', and 'required' keywords. The types introduced are internal, confining these features to the project itself without affecting other projects that reference it. By installing this package, you get all the newest C# features in one place, eliminating the need to install separate packages for each feature. Future updates will include more new features as they are released.</Description>
     <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\dotnetCampus.Nullable.Source\**\*.cs" Exclude="..\dotnetCampus.Nullable.Source\**\obj\**\*.cs;..\dotnetCampus.Nullable\**\bin\**\*.cs" />
-    <Compile Include="..\dotnetCampus.IsExternalInit.Source\**\*.cs" Exclude="..\dotnetCampus.IsExternalInit.Source\**\obj\**\*.cs;..\dotnetCampus.IsExternalInit\**\bin\**\*.cs" />
-    <Compile Include="..\dotnetCampus.Required.Source\**\*.cs" Exclude="..\dotnetCampus.Required.Source\**\obj\**\*.cs;..\dotnetCampus.Required\**\bin\**\*.cs" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="all"/>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
   </ItemGroup>
 
-  <Target Name="IncludeAllDependencies" BeforeTargets="_GetPackageFiles">
+  <Target Name="_IncludeAllDependencies" BeforeTargets="_GetPackageFiles">
     <ItemGroup>
-      <None Include="_._" Pack="True" PackagePath="lib\net7.0" />
+      <None Include="$(OutputPath)..\..\dotnetCampus.LatestCSharpFeatures.Analyzer\$(Configuration)\**\*.dll" Pack="True" PackagePath="analyzers\dotnet\cs" />
     </ItemGroup>
   </Target>
 

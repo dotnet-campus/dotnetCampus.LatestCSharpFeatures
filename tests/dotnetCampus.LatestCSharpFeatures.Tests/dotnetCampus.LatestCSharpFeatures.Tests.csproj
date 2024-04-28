@@ -1,15 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0;net6.0;net5.0;netcoreapp3.1;netcoreapp3.0;netstandard2.0;net48;net472;net471;net47;net462;net461;net46;net452;net451;net45;net40</TargetFrameworks>
+    <TargetFrameworks>net8.0;net7.0;net6.0;net5.0;netcoreapp3.1;netcoreapp3.0;netstandard2.0;net48;net472;net471;net47;net462;net461;net46;net452;net451;net45;net40</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!--
+        NETSDK1138: 目标框架 netxx 不受支持，将来不会收到安全更新。
+        NU5100: 重复的 PackageReference，包含了相同的包引用。
+    -->
+    <NoWarn>$(NoWarn);NETSDK1138;NU1504</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="dotnetCampus.LatestCSharpFeatures.Source" Version="11.0.0-alpha03" />
+    <PackageReference Include="dotnetCampus.LatestCSharpFeatures" Version="12.0.0-alpha03" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
   </ItemGroup>
 

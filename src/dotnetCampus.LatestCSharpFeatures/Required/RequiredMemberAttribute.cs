@@ -1,7 +1,5 @@
 ﻿#if NET7_0_OR_GREATER
-// .NET 7.0 开始已包含 required。
 #else
-// 旧框架需要包含 required。
 namespace System.Runtime.CompilerServices
 {
     /// <summary>

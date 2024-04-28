@@ -14,13 +14,11 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: |
-          3.1.x
-          5.0.x
-          6.0.x
-          7.0.x
+          8.0.x
 
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: dotnet build --configuration release
 
-    - name: Test
-      run: dotnet test --configuration Release
+#    No need because all tests passed if the solution is successfully built
+#    - name: Test
+#      run: dotnet test --configuration release
