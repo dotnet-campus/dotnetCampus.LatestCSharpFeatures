@@ -10,7 +10,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2" />
+    <!-- 当前 2024.11 龙芯的最新 dotnet sdk 为 8.0.7 版本，这个版本分析器对应的是 4.8.0 版本。为了支持龙芯构建，降低分析器版本。详细请参阅 https://ftp.loongnix.cn/dotnet/ -->
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
   </ItemGroup>
 
   <ItemGroup>
