@@ -14,7 +14,6 @@ internal
     static class DotNetCampusLatestCSharpFeaturesKeyValuePairExtensions
 {
     internal static void Deconstruct<TKey, TValue>(this KeyValuePair<TKey, TValue> pair, out TKey key, out TValue value)
-        where TKey : notnull
     {
         key = pair.Key;
         value = pair.Value;
