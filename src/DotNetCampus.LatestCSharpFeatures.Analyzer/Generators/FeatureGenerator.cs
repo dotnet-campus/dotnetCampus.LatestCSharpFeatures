@@ -18,6 +18,9 @@ public class FeatureGenerator : IIncrementalGenerator
 
     private void OnExecute(IncrementalGeneratorPostInitializationContext context)
     {
+        // .NET Core 3.0 / .NET Standard 2.1 才开始支持 KeyValuePair 的 Deconstruct 方法。
+        GenerateFeatureSource(context, "KeyValuePair");
+
         // .NET Core 3.0 / .NET Standard 2.1 才开始支持 Nullable；.NET 5.0 开始支持更多。
         GenerateFeatureSource(context, "Nullable");
 
